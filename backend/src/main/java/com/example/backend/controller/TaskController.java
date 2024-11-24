@@ -1,10 +1,10 @@
-package com.example.todolist_backend.controller;
+package com.example.backend.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.todolist_backend.model.Task;
-import com.example.todolist_backend.service.TaskService;
+import com.example.backend.model.Task;
+import com.example.backend.service.TaskService;
 
 import java.util.List;
 

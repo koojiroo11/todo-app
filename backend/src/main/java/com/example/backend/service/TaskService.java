@@ -1,11 +1,11 @@
-package com.example.todolist_backend.service;
+package com.example.backend.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.todolist_backend.model.Task;
-import com.example.todolist_backend.repository.TaskRepository;
+import com.example.backend.model.Task;
+import com.example.backend.repository.TaskRepository;
 
 @Service
 public class TaskService {

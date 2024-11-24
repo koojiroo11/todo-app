@@ -1,4 +1,4 @@
-package com.example.todolist_backend.model;
+package com.example.backend.model;
 
 import java.time.LocalDate;
 
