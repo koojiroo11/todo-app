@@ -8,6 +8,7 @@ import com.example.backend.service.TaskService;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("api/tasks/")
+@RequestMapping("api/tasks")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TaskController {
     private final TaskService taskService;
 
