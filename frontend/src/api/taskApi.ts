@@ -16,5 +16,5 @@ export const addTask = async (task: { title: string; deadline: string }) => {
 
 // タスクの削除
 export const deleteTask = async (id: number) => {
-  await axios.delete(`{API_URL}/${id}`);
+  await axios.delete(`${API_URL}/${id}`);
 };
