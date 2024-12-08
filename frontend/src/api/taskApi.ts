@@ -14,6 +14,15 @@ export const addTask = async (task: { title: string; deadline: string }) => {
   return response.data;
 };
 
+// タスクの更新
+export const updateTask = async (
+  id: number,
+  updatedTask: { title: string; deadline: string }
+) => {
+  const response = await axios.put(`${API_URL}/${id}`, updatedTask);
+  return response.data;
+};
+
 // タスクの削除
 export const deleteTask = async (id: number) => {
   await axios.delete(`${API_URL}/${id}`);
