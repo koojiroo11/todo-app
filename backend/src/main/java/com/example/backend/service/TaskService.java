@@ -1,6 +1,7 @@
 package com.example.backend.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,15 @@ public class TaskService {
 
     public Task save(Task task) {
         return taskRepository.save(task);
+    }
+
+    public Optional<Task> updateTask(Long id, Task updatedTask) {
+        return taskRepository.findById(id)
+                .map(task -> {
+                    task.setTitle(updatedTask.getTitle());
+                    task.setDeadline(updatedTask.getDeadline());
+                    return taskRepository.save(task);
+                });
     }
 
     public void deleteById(Long id) {
