@@ -19,19 +19,25 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAdd }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="タスク名"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="date"
-        value={deadline}
-        onChange={(e) => setDeadline(e.target.value)}
-      />
-      <button type="submit">追加</button>
+    <form onSubmit={handleSubmit} className="task-form">
+      <div form-group>
+        <input
+          type="text"
+          placeholder="タスク名"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div form-group>
+        <input
+          type="date"
+          value={deadline}
+          onChange={(e) => setDeadline(e.target.value)}
+        />
+      </div>
+      <button type="submit" className="btn-save">
+        追加
+      </button>
     </form>
   );
 };

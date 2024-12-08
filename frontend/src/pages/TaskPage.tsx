@@ -50,7 +50,7 @@ const TaskPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="task-list">
       <h1>Todoリスト</h1>
       <TaskForm onAdd={handleAddTask} />
       <TaskList
